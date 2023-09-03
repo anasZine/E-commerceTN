@@ -1,0 +1,35 @@
+<%- include('parts/top.ejs')%>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <% if (book && book.image) { %>
+                <img height="350px" src="/uploads/<%= book.image %>">
+                <% } else { %>
+                    <p>Image not available</p>
+                    <% } %>
+            </div>
+            <div class="col">
+                <% if (book) { %>
+                <h1><%= book.title%></h1>
+                <h4><%= book.author%></h4>
+                <span><%= book.price%>$</span>
+                <p><%= book.description%></p>
+                <% } else { %>
+                    <p>Book details not available</p>
+                <% } %>
+            </div>
+    
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%- include('parts/bottom.ejs')%>
